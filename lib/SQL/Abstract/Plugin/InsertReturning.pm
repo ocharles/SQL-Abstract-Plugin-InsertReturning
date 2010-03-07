@@ -27,6 +27,9 @@ use Sub::Exporter -setup => {
 
 =head1 DESCRIPTION
 
+B<DEPRECATED>. This functionality is now in L<SQL::Abstract>
+itself. This module just wraps around that. Please, stop using this!
+
 Some databases have support for returning data after an insert query, which can
 help gain performance when doing common operations such as inserting and then
 returning the new objects ID.
@@ -47,19 +50,13 @@ C<\@returning> is an array reference of column names that should be
 returned.
 
 This method will return an array of the SQL generated, and then all bind
-parameters. 
+parameters.
 
 =cut
 
 sub insert_returning {
     my ($self, $table, $fieldvals, $returning) = @_;
-    my ($sql, @bind) = $self->insert($table, $fieldvals);
-    if ($returning) {
-        my $cols = (ref $returning eq 'ARRAY') ? join ', ', map { $self->_quote($_) } @$returning
-                                               : $returning;
-        $sql .= $self->_sqlcase('returning') . " $cols";
-    }
-    return wantarray ? ($sql, @bind) : $sql;
+    return $self->insert($table, $fieldvals, { returning => $returning });
 }
 
 1;
