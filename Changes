@@ -3,6 +3,7 @@ Revision history for Perl module SQL::Abstract::Plugin::InsertReturning
 0.06 2014-03-
 
     - Added an abstract, which is also flags as deprecated
+    - Added [GithubMeta] to dist.ini, so github repo listed in dist metadata
 
 0.05 2010-03-10
 
