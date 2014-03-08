@@ -12,6 +12,10 @@ use Sub::Exporter -setup => {
     }
 };
 
+=head1 NAME
+
+SQL::Abstract::Plugin::InsertReturning - (DEPRECATED) Augment SQL::Abstract->insert with support for returning data
+
 =head1 SYNOPSIS
 
     use SQL::Abstract;

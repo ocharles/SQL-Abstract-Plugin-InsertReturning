@@ -1,4 +1,14 @@
-2009-11-25    <oliver.g.charles@googlemail.com>
+Revision history for Perl module SQL::Abstract::Plugin::InsertReturning
 
-	* InsertReturning.pm: First version
+0.06 2014-03-
+
+    - Added an abstract, which is also flags as deprecated
+
+0.05 2010-03-10
+
+    - Deprecated
+
+0.01 2009-11-25    <oliver.g.charles@googlemail.com>
+
+	- InsertReturning.pm: First version
 
